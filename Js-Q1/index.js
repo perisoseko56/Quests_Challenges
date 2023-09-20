@@ -16,7 +16,7 @@ document.getElementById('calculate').addEventListener('click', function() {
 
   switch (operator) {
     case 'sum':
-      /* code for working out the sum */
+      /* @Bug, fails to calculate the sum */
       var sum = 0;
       for (var i = 0; i < list.length; i++) {
         sum += parseInt(list([i]));
@@ -68,7 +68,7 @@ document.getElementById('calculate').addEventListener('click', function() {
       document.getElementById('output').innerHTML = median;
       break;
     case 'mode':
-      /* very experimental code is going to go here */
+      /* @Bug Computes wrong mode*/
       var modeMap = {};
       var maxCount = 0;
       var modes = [];
