@@ -19,13 +19,13 @@ document.getElementById('calculate').addEventListener('click', function() {
       /* @Bug, fails to calculate the sum */
       var sum = 0;
       for (var i = 0; i < list.length; i++) {
-        sum += parseInt(list([i]));
+        sum += parseInt(list[i]);
       }
       document.getElementById('output').innerHTML(sum);
       break;
     case 'average':
       for (var i = 0; i < list.length; i++) {
-        sum += parseInt(list([i]));
+        sum += parseInt(list[i]);
       }
       document.getElementById('output').innerHTML = sum / list.length;
       break;
@@ -79,7 +79,7 @@ document.getElementById('calculate').addEventListener('click', function() {
 
         if (modeMap[num] > maxCount) {
           maxCount = modeMap[num];
-          modes = [num]; // Reset modes array with the current mode
+          modes = []; // Reset modes array with the current mode
         } else if (modeMap[num] === maxCount && modes.indexOf(num) === -1) {
           modes.push(num); // Add this number to the modes array if it's not already present
         }
