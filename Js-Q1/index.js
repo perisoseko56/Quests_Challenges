@@ -21,13 +21,12 @@ document.getElementById('calculate').addEventListener('click', function() {
       for (var i = 0; i < list.length; i++) {
         sum += parseInt(list[i]);
       }
-      document.getElementById('output').innerHTML(sum);
       break;
     case 'average':
       for (var i = 0; i < list.length; i++) {
         sum += parseInt(list[i]);
       }
-      document.getElementById('output').innerHTML = sum / list.length;
+      document.getElementById('output').innerHTML = (sum / list.length).toString();
       break;
     case 'min':
       var min = list[0];
@@ -36,7 +35,7 @@ document.getElementById('calculate').addEventListener('click', function() {
           min = list[i];
         }
       }
-      document.getElementById('output').innerHTML = min;
+      document.getElementById('output').innerHTML = min.toString();
       break;
     case 'max':
       var max = list[0];
@@ -45,7 +44,7 @@ document.getElementById('calculate').addEventListener('click', function() {
           max = list[i];
         }
       }
-      document.getElementById('output').innerHTML = max;
+      document.getElementById('output').innerHTML = max.toString();
       break;
     case 'median':
       //sort the list
@@ -86,6 +85,7 @@ document.getElementById('calculate').addEventListener('click', function() {
       }
 
       document.getElementById('output').innerHTML = modes.join(', ');
+      break;
     case 'range':
       var min = list[0];
       var max = list[0];
@@ -97,7 +97,7 @@ document.getElementById('calculate').addEventListener('click', function() {
           max = list[i];
         }
       }
-      document.getElementById('output').innerHTML = max - min;
+      document.getElementById('output').innerHTML = (max - min).toString();
       break;
     default:
       document.getElementById('output').innerHTML = 'Invalid operator';
